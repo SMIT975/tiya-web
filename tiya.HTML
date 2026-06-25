@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Market Knowledge Matters</title>
+    <link rel="stylesheet" href="./tiya,css.css">
+
+</head>
+
+<body>
+
+    <div class="poster">
+
+        <!-- Logo -->
+        <div class="logo">
+            <img src="./TYA LOGO.3.png" alt="TIYA Logo">
+        </div>
+        <div Class="img">
+            <img src="./tiya background 3.png" alt="TIYA">
+        </div>
+        <!-- Button -->
+        <div class="btn">
+            <a
+                href="https://docs.google.com/forms/d/e/1FAIpQLSfckaGyBO49taDBu7P3KZFZCywtnjAOC-b3iGOKmSNcTbXkZA/viewform?usp=dialog">FRUITS</a>
+            <a
+                href="https://docs.google.com/forms/d/e/1FAIpQLSdqweoFyHlRqeQz1s_Tfcmw9787c7VRP_34nnML91ySNwcDlQ/viewform?usp=publish-editor">VEGETABLES</a>
+            <a
+                href="https://docs.google.com/forms/d/e/1FAIpQLSfwNKo2v0KxR1rxXnR4iIdukReblO7tT0xWFxR-2H_wfGqAtw/viewform?usp=publish-editor">NON
+                PERISHABLE</a>
+            <a
+                href="https://docs.google.com/forms/d/e/1FAIpQLSfJv-j7NXxRUib0hqJsx_Ifkql5pXDqgqeoLwQy48ge1n6LPw/viewform?usp=publish-editor">SPICES</a>
+        </div>
+
+        <!-- Book + Chart Image -->
+
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+
+            // Fade In Animation
+            document.querySelector(".poster").style.opacity = "0";
+            document.querySelector(".poster").style.transform = "scale(.95)";
+
+            setTimeout(() => {
+                document.querySelector(".poster").style.transition = "all .8s ease";
+                document.querySelector(".poster").style.opacity = "1";
+                document.querySelector(".poster").style.transform = "scale(1)";
+            }, 100);
+
+            // Button Animation
+            const buttons = document.querySelectorAll(".btn a");
+
+            buttons.forEach((btn, index) => {
+
+                btn.style.opacity = "0";
+                btn.style.transform = "translateY(30px)";
+
+                setTimeout(() => {
+                    btn.style.transition = "all .5s ease";
+                    btn.style.opacity = "1";
+                    btn.style.transform = "translateY(0)";
+                }, 300 + (index * 150));
+
+                // Click Effect
+                btn.addEventListener("click", function () {
+
+                    this.style.transform = "scale(.95)";
+
+                    setTimeout(() => {
+                        this.style.transform = "scale(1)";
+                    }, 150);
+
+                });
+
+            });
+
+        });
+    </script>
+
+</body>
+
+</html>
